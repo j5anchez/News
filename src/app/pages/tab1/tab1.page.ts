@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {Article} from '../../interfaces';
 
 import {NewsService} from '../../services/news.service';
-
-// import {NewsRespuesta} from './../../interfaces/index';
 
 @Component({
   selector: 'app-tab1',
@@ -10,11 +9,11 @@ import {NewsService} from '../../services/news.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+  public articles: Article[] = [];
   constructor(private newService: NewsService) {}
 
   ngOnInit() {
-    this.newService.getTopHeadLines().subscribe(articles => {
-      console.log(articles);
-    });
+    this.newService.getTopHeadLines().subscribe(
+        articles => this.articles.push(...articles));
   }
 }
