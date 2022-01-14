@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../../components/components.module';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -12,7 +13,7 @@ import {Tab2Page} from './tab2.page';
 @NgModule({
   imports: [
     IonicModule, CommonModule, FormsModule, ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,ComponentsModule
   ],
   declarations: [Tab2Page]
 })

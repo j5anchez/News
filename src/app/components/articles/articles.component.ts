@@ -10,4 +10,5 @@ import {Article} from '../../interfaces';
 export class ArticlesComponent {
   @Input() articles: Article[] = [];
   constructor() {}
+  // ngOnInit() {}
 }

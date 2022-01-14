@@ -13,4 +13,10 @@ export class NewsService {
     return this.leerFichero.get<NewsRespuesta>('/assets/noticias/noticias.json')
         .pipe(map(({articles}) => articles));
   }
+
+
+  // getTopHeadlinesByCategory(category: string): Observable<Article[]> {
+  //   return this.leerFichero.get<NewsRespuesta>('/assets/noticias/noticias.json')
+  //       .pipe(map(({articles}) => articles));
+  // }
 }
